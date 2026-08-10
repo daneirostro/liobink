@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Soy fulana de tal</title>
+<title>Primero</title>
 <style>
   :root{
     --glass: rgba(20, 26, 22, 0.55);
@@ -18,7 +18,20 @@
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap');
   *{ box-sizing: border-box; margin:0; padding:0; }
   html, body{ min-height: 100%; font-family: var(--font-body); color: var(--text-main); }
-  .bg-photo{ position: fixed; inset: 0; z-index: -2; background-image: url('https://i.pinimg.com/originals/9c/b6/c2/9cb6c2f1dbee993b0d1de608d6e8edf5.jpg'); background-size: cover; background-position: center; }
+  .bg-photo{
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background-image: url('https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1600&auto=format&fit=crop');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @media (min-width: 720px){
+    .bg-photo{
+      background-position: center 30%;
+    }
+  }
   .bg-overlay{ position: fixed; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(6,8,7,0.55) 0%, rgba(6,8,7,0.35) 28%, rgba(6,8,7,0.55) 62%, rgba(6,8,7,0.88) 100%); }
   .page{ min-height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center; padding: 64px 20px 48px; }
   .profile-pic{ width: 108px; height: 108px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.85); box-shadow: 0 8px 30px rgba(0,0,0,0.45); animation: rise 0.7s ease-out both; }
@@ -52,29 +65,16 @@
 <main class="page">
   <img class="profile-pic" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=300&auto=format&fit=crop" alt="Foto de perfil">
   <div class="title-row">
-    <h1 class="display-name">Soy fulana de tal</h1>
+    <h1 class="display-name">Primero</h1>
     <button class="icon-btn" id="actionBtn" type="button" aria-label="Compartir o copiar enlace de esta página">
       <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.6 15.8 6.4M8.3 13.4l7.5 4.2" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
     </button>
   </div>
-  <p class="tagline">Pan artesanal todos los días</p>
+  <p class="tagline">avion que no dejas dormir</p>
   <span class="copy-toast" id="copyToast" aria-live="polite"></span>
   <nav class="social-row" aria-label="Redes sociales">
-    <a href="https://instagram.com/dulcearoma" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.25.06 2.1.25 2.85.55.77.3 1.42.7 2.07 1.35.65.65 1.05 1.3 1.35 2.07.3.75.49 1.6.55 2.85.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.06 1.25-.25 2.1-.55 2.85a5.8 5.8 0 0 1-1.35 2.07 5.8 5.8 0 0 1-2.07 1.35c-.75.3-1.6.49-2.85.55-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.25-.06-2.1-.25-2.85-.55a5.8 5.8 0 0 1-2.07-1.35 5.8 5.8 0 0 1-1.35-2.07c-.3-.75-.49-1.6-.55-2.85C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.06-1.25.25-2.1.55-2.85a5.8 5.8 0 0 1 1.35-2.07A5.8 5.8 0 0 1 6.24 .88c.75-.3 1.6-.49 2.85-.55C10.34 2.2 10.74 2.2 12 2.2zm0 3a6.8 6.8 0 1 0 0 13.6 6.8 6.8 0 0 0 0-13.6zm0 2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm6.9-2.2a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg></a>
-    <a href="https://www.tiktok.com/@yinacomfi" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="tiktok"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.2v13.2a2.9 2.9 0 1 1-2.05-2.77v-3.3a6.15 6.15 0 1 0 5.25 6.09V8.9a7.9 7.9 0 0 0 4.6 1.47V7.15A4.9 4.9 0 0 1 16.6 2z"/></svg></a>
-    <a href="https://wa.me/51999999999" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="whatsapp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.05-1.35A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3 .8.8-2.93-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.25-.13-1.45-.72-1.68-.8-.22-.08-.39-.13-.55.13-.16.25-.63.8-.78.97-.14.16-.28.18-.53.06-.25-.13-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.24-.4.08-.16.04-.3-.02-.42-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.25-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.45-.6 1.65-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.16-.47-.28z"/></svg></a>
-    <a href="https://www.facebook.com/danyeliascisneros/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
-    <a href="https://www.youtube.com/@LaRepublica" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="youtube"><svg viewBox="0 0 24 24"><path d="M22 12s0-3.2-.4-4.7c-.24-.9-.94-1.6-1.84-1.84C18.13 5 12 5 12 5s-6.13 0-7.76.46c-.9.24-1.6.94-1.84 1.84C2 8.8 2 12 2 12s0 3.2.4 4.7c.24.9.94 1.6 1.84 1.84C5.87 19 12 19 12 19s6.13 0 7.76-.46c.9-.24 1.6-.94 1.84-1.84.4-1.5.4-4.7.4-4.7zM10 15.2V8.8L15.6 12 10 15.2z"/></svg></a>
-    <a href="https://x.com/canalN" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="x"><svg viewBox="0 0 24 24"><path d="M3 3h4.4l4 5.6L16.4 3H21l-6.9 8.7L21.4 21H17l-4.4-6.1L7.6 21H3l7.3-9.1L3 3z"/></svg></a>
-    <a href="mailto:correo@ejemplo.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="correo"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.4 2 7.6 5.6L19.6 7H4.4zM2 8.3V17h20V8.3l-8.4 6.2a1 1 0 0 1-1.2 0L2 8.3z"/></svg></a>
-    <a href="https://onlyfans.com/carolinasamani_2" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="onlyfans"><svg viewBox="0 0 24 24"><path d="M9 6a6 6 0 1 0 3.2 11.1A6 6 0 1 0 15 6a5.98 5.98 0 0 0-3 .8A5.98 5.98 0 0 0 9 6zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm6 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg></a>
-    <a href="https://www.patreon.com/labibliotecademerlin" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="patreon"><svg viewBox="0 0 24 24"><circle cx="14.5" cy="9" r="6.2"/><rect x="4" y="3" width="2.4" height="18"/></svg></a>
-    <a href="https://www.qualitybakery.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="web"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 8h-3.05a15.6 15.6 0 0 0-1.3-5.06A8.03 8.03 0 0 1 18.9 10zM12 4.06c.83 1.1 1.75 3 2.1 5.94H9.9c.35-2.94 1.27-4.84 2.1-5.94zM4.26 12h3.7a17.6 17.6 0 0 0 0 4H4.26a8 8 0 0 1 0-4zm.84-2a8.03 8.03 0 0 1 4.35-4.06A15.6 15.6 0 0 0 8.15 10H5.1zM9.9 14h4.2a13.8 13.8 0 0 1-2.1 5.94A13.8 13.8 0 0 1 9.9 14zm.1-2a17.6 17.6 0 0 1 0-4h4a17.6 17.6 0 0 1 0 4h-4zm-2.05 7.06A15.6 15.6 0 0 0 6.65 14H5.1a8.03 8.03 0 0 0 2.85 5.06zM16.35 14a15.6 15.6 0 0 1-1.3 5.06A8.03 8.03 0 0 0 18.9 14h-2.55zm.05-2h3.7a8 8 0 0 0 0-4h-3.7a17.6 17.6 0 0 1 0 4z"/></svg></a>
-    <a href="https://discord.gg/abc123" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="discord"><svg viewBox="0 0 24 24"><path d="M18.9 5.3A16 16 0 0 0 15 4l-.2.4a12 12 0 0 1 3.5 1.7 13.6 13.6 0 0 0-12.6 0A12 12 0 0 1 9.2 4.4L9 4a16 16 0 0 0-3.9 1.3C2.8 8.6 2 11.8 2.3 15a16 16 0 0 0 4.7 2.4l.7-1.1a10 10 0 0 1-1.6-.8l.4-.3a11.6 11.6 0 0 0 10.9 0l.4.3a10 10 0 0 1-1.6.8l.7 1.1A16 16 0 0 0 21.7 15c.4-3.7-.6-6.8-2.8-9.7zM9.4 13.5c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7zm5.2 0c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7z"/></svg></a>
-    <a href="https://t.me/Lucianaprado_bot" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="telegram"><svg viewBox="0 0 24 24"><path d="M21.5 3.5 2.7 10.8c-.7.3-.7 1.3.1 1.5l4.6 1.4 1.8 5.6c.2.6 1 .8 1.4.3l2.5-2.7 4.7 3.5c.6.4 1.4.1 1.6-.6l3.2-15c.2-.9-.7-1.6-1.5-1.3zM9 14.5l-1.3-4 9.7-6.1L9 14.5zm0 0v3.8c0 .2.3.3.4.1l1.5-2-1.9-1.9z"/></svg></a>
-    <a href="https://www.twitch.tv/djmissshelton" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="twitch"><svg viewBox="0 0 24 24"><path d="M4 2 2.5 6v14h5V22l3-2h4l5-4V2H4zm15 11-3 3h-4l-2.5 2v-2H6V4h13v9z"/><rect x="10" y="7" width="1.8" height="5"/><rect x="14" y="7" width="1.8" height="5"/></svg></a>
-    <a href="https://www.snapchat.com/@kyliejenner?" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="snapchat"><svg viewBox="0 0 24 24"><path d="M12 3c3 0 5 2.2 5 5.4v1.9c0 .3.3.5.7.6.6.2 1.5.5 1.9.7.4.2.3.6.1.8-.2.2-.9.5-1.5.7-.2.1-.3.3-.2.5.2.7.6 1.6 1.6 1.9.3.1.3.4.1.6-.4.4-1.3.7-2.2.8-.1 0-.2.1-.2.3 0 .2 0 .5-.1.7-.1.3-.4.3-.8.2-.5-.1-1.1-.2-1.8-.1-.7.1-1.2.5-1.6.8-.5.4-1 .8-1.9.8s-1.4-.4-1.9-.8c-.4-.3-.9-.7-1.6-.8-.7-.1-1.3 0-1.8.1-.4.1-.7.1-.8-.2-.1-.2-.1-.5-.1-.7 0-.2-.1-.3-.2-.3-.9-.1-1.8-.4-2.2-.8-.2-.2-.2-.5.1-.6 1-.3 1.4-1.2 1.6-1.9.1-.2 0-.4-.2-.5-.6-.2-1.3-.5-1.5-.7-.2-.2-.3-.6.1-.8.4-.2 1.3-.5 1.9-.7.4-.1.7-.3.7-.6V8.4C7 5.2 9 3 12 3z"/></svg></a>
-    <a href="https://www.pinterest.com/claudiamhill59/pugs/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="pinterest"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.6l1.4-6s-.3-.7-.3-1.7c0-1.6.9-2.8 2.1-2.8 1 0 1.5.7 1.5 1.6 0 1-.6 2.4-.9 3.8-.3 1.1.6 2.1 1.7 2.1 2.1 0 3.5-2.6 3.5-5.7 0-2.4-1.6-4.1-4.5-4.1-3.3 0-5.3 2.4-5.3 5.1 0 .9.3 1.6.7 2.1.2.2.2.3.1.5l-.3 1c-.1.3-.3.4-.6.3-1.4-.6-2.1-2.3-2.1-4.1 0-3.1 2.6-6.7 7.6-6.7 4.1 0 6.8 2.9 6.8 6.1 0 4.2-2.3 7.3-5.7 7.3-1.1 0-2.2-.6-2.6-1.3l-.7 2.8c-.3 1-.9 2.1-1.4 2.9A10 10 0 1 0 12 2z"/></svg></a>
+    <a href="instagram" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.25.06 2.1.25 2.85.55.77.3 1.42.7 2.07 1.35.65.65 1.05 1.3 1.35 2.07.3.75.49 1.6.55 2.85.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.06 1.25-.25 2.1-.55 2.85a5.8 5.8 0 0 1-1.35 2.07 5.8 5.8 0 0 1-2.07 1.35c-.75.3-1.6.49-2.85.55-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.25-.06-2.1-.25-2.85-.55a5.8 5.8 0 0 1-2.07-1.35 5.8 5.8 0 0 1-1.35-2.07c-.3-.75-.49-1.6-.55-2.85C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.06-1.25.25-2.1.55-2.85a5.8 5.8 0 0 1 1.35-2.07A5.8 5.8 0 0 1 6.24 .88c.75-.3 1.6-.49 2.85-.55C10.34 2.2 10.74 2.2 12 2.2zm0 3a6.8 6.8 0 1 0 0 13.6 6.8 6.8 0 0 0 0-13.6zm0 2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm6.9-2.2a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg></a>
+    <a href="facebook" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
   </nav>
   <section class="card-list" aria-label="Enlaces">
     <a href="https://example.com/catalogo" class="link-card" target="_blank" rel="noopener noreferrer" style="animation-delay:0s, 0.6s; animation-duration:0.6s, 4.5s;">
@@ -89,7 +89,7 @@
   <footer>hecho con 🤎</footer>
 </main>
 <script>
-  var PUBLIC_URL = "https://ayudaenlacompu.wixsite.com/my-site-28";
+  var PUBLIC_URL = "https://daneirostro.github.io/liobink/";
   var actionBtn = document.getElementById('actionBtn');
   var toast = document.getElementById('copyToast');
   var pageUrl = PUBLIC_URL || window.location.href;
