@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Código insertado</title>
+<title>Panadería Dulce Aroma</title>
 <style>
   :root{
     --glass: rgba(20, 26, 22, 0.22);
@@ -50,6 +50,9 @@
   .embeds-section{ width: 100%; max-width: 480px; display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 36px; }
   .embeds-section iframe{ max-width: 100%; border-radius: 14px; border: none; }
   .embeds-section blockquote{ margin: 0; max-width: 100% !important; width: 100% !important; }
+  .contact-btn{ display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: auto; max-width: 100%; margin-top: 36px; padding: 15px 32px; border-radius: 999px; background: var(--accent); color: #1b1204; text-decoration: none; font-weight: 700; font-size: 1rem; text-align: center; box-shadow: 0 10px 30px rgba(224,168,64,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease; animation: rise 0.6s ease-out both; }
+  .contact-btn svg{ width: 22px; height: 22px; flex-shrink: 0; fill: currentColor; }
+  .contact-btn:hover, .contact-btn:focus-visible{ transform: translateY(-3px); box-shadow: 0 14px 36px rgba(224,168,64,0.45); filter: brightness(1.05); }
   @keyframes rise{ from{ opacity: 0; transform: translateY(14px); } to{ opacity: 1; transform: translateY(0); } }
   @keyframes float{ 0%, 100%{ transform: translateY(0); } 50%{ transform: translateY(-5px); } }
   @media (prefers-reduced-motion: reduce){ *{ animation: none !important; transition: none !important; } }
@@ -66,7 +69,7 @@
 <main class="page">
   <img class="profile-pic" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=300&auto=format&fit=crop" alt="Foto de perfil">
   <div class="title-row">
-    <h1 class="display-name">Código insertado</h1>
+    <h1 class="display-name">Panadería Dulce Aroma</h1>
     <button class="icon-btn" id="actionBtn" type="button" aria-label="Compartir o copiar enlace de esta página">
       <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.6 15.8 6.4M8.3 13.4l7.5 4.2" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
     </button>
@@ -89,9 +92,9 @@
     </a>
   </section>
   <section class="embeds-section" aria-label="Contenido destacado">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/e-4aPYozctQ?si=PSyJHck4ght01fYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@zullyy_cs/video/7653313715659541778" data-video-id="7653313715659541778" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@zullyy_cs" href="https://www.tiktok.com/@zullyy_cs?refer=embed">@zullyy_cs</a> 🫶🏻 <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ original sound - 𝐒𝐡𝐞𝐥𝐥" href="https://www.tiktok.com/music/original-sound-7488869649048718097?refer=embed">♬ original sound - 𝐒𝐡𝐞𝐥𝐥</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
   </section>
-  <footer>hecho con 🤎</footer>
+  <a href="https://wa.me/51999999999" class="contact-btn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.05-1.35A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3 .8.8-2.93-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.25-.13-1.45-.72-1.68-.8-.22-.08-.39-.13-.55.13-.16.25-.63.8-.78.97-.14.16-.28.18-.53.06-.25-.13-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.24-.4.08-.16.04-.3-.02-.42-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.25-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.45-.6 1.65-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.16-.47-.28z"/></svg><span>Escríbeme por WhatsApp</span></a>
 </main>
 <script>
   var PUBLIC_URL = "https://ayudaenlacompu.wixsite.com/dulcearoma";
