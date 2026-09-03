@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>diseño final</title>
+<style>
+  :root{
+    --glass: rgba(20, 26, 22, 0.22);
+    --glass-border: rgba(255, 255, 255, 0.14);
+    --text-main: #f5f2ea;
+    --text-soft: rgba(245, 242, 234, 0.72);
+    --accent: #e0a840;
+    --accent-soft: rgba(224, 168, 64, 0.35);
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap');
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html, body{ min-height: 100%; font-family: var(--font-body); color: var(--text-main); background: #0e1410; }
+  .hero-photo{
+    width: 100%;
+    height: 42vh;
+    background-image: url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @media (min-width: 720px){
+    .hero-photo{ height: 46vh; background-position: center 30%; }
+  }
+  .page{ min-height: 60vh; width: 100%; display: flex; flex-direction: column; align-items: center; padding: 0 20px 48px; }
+  .profile-pic{ width: 108px; height: 108px; margin-top: -54px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.85); box-shadow: 0 8px 30px rgba(0,0,0,0.45); }
+  .display-name{ font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 4vw, 2rem); text-align: center; margin-top: 10px; }
+  .tagline{ font-size: 0.95rem; color: var(--text-soft); margin-top: 6px; text-align: center; max-width: 420px; }
+  .social-row{ display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 22px; max-width: 320px; }
+  .social-link{ width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--glass); border: 1px solid var(--glass-border); text-decoration: none; transition: transform 0.25s ease; }
+  .social-link img{ width: 24px; height: 24px; }
+  .social-link:hover{ transform: translateY(-3px); }
+  .card-list{ width: 100%; max-width: 480px; display: flex; flex-direction: column; gap: 16px; margin-top: 36px; }
+  .link-card{ display: flex; align-items: center; gap: 14px; padding: 12px 18px 12px 12px; border-radius: 18px; background: var(--glass); border: 1px solid var(--glass-border); text-decoration: none; color: var(--text-main); transition: transform 0.25s ease; }
+  .link-card:hover{ transform: translateY(-4px); border-color: var(--accent); }
+  .link-thumb{ width: 52px; height: 52px; border-radius: 12px; object-fit: cover; flex-shrink: 0; }
+  .link-title{ flex: 1; text-align: center; font-weight: 600; font-size: 0.98rem; }
+  .embeds-section{ width: 100%; max-width: 480px; margin-top: 36px; }
+  .contact-btn{ display: inline-flex; align-items: center; gap: 10px; margin-top: 36px; padding: 15px 32px; border-radius: 999px; background: var(--accent); color: #1b1204; text-decoration: none; font-weight: 700; }
+  .contact-btn img{ width: 22px; height: 22px; }
+  footer{ margin-top: 40px; font-size: 0.75rem; color: var(--text-soft); text-align: center; }
+</style>
+</head>
+<body>
+<div class="hero-photo"></div>
+<main class="page">
+  <img class="profile-pic" src="" alt="Foto de perfil">
+  <h1 class="display-name">diseño final</h1>
+  <p class="tagline">prueba de github primera</p>
+  <nav class="social-row" aria-label="Redes sociales">
+    <a href="https://web.whatsapp.com/" class="social-link" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/color/96/instagram-new.png" alt="instagram"></a>
+    <a href="https://www.instagram.com/prueba/" class="social-link" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/color/96/tiktok--v1.png" alt="tiktok"></a>
+  </nav>
+  <section class="card-list" aria-label="Enlaces">
+    <a href="https://www.youtube.com/watch?v=F24r57av4ec" class="link-card" target="_blank" rel="noopener noreferrer"><img class="link-thumb" src="https://static.wixstatic.com/media/c0c363_66df28e9dab64e76ac3ef28e078fe5b5~mv2.webp" alt=""><span class="link-title">Video</span></a>
+    <a href="d jdfkldlkf jdkljdkljfgdkljgfdj kgvjfk gjdkj lkdjklvfdj" class="link-card" target="_blank" rel="noopener noreferrer"><img class="link-thumb" src="https://static.wixstatic.com/media/c0c363_4050983f6e334bcb8bf5530f7cff3240~mv2.webp" alt=""><span class="link-title">Destacado</span></a>
+  </section>
+  
+  <a href="https://wa.me/51987652346" class="contact-btn" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/color/96/whatsapp--v1.png" alt="">Contáctanos</a>
+</main>
+</body>
+</html>
