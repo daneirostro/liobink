@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 — Esta página se fue de bio</title>
+<title>404 — Este perfil se hizo invisible</title>
 <style>
   *{ box-sizing: border-box; margin:0; padding:0; }
   html, body{
     min-height: 100%;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background: #150a21;
-    color: #f5f2ea;
+    background: #cdeaec;
+    color: #16213e;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,41 +19,43 @@
   }
   .contenedor{ max-width: 420px; }
   .ilustracion{
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 24px;
-    margin: 0 auto 20px;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
     display: block;
+    margin: 0 auto 12px;
   }
-  .numero{
+  h1{
     font-family: 'Fraunces', Georgia, serif;
-    font-size: 5rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #a855f7;
-    line-height: 1;
+    color: #16213e;
   }
-  h1{ font-size: 1.4rem; margin-top: 16px; }
-  p{ color: rgba(245,242,234,0.7); margin-top: 10px; font-size: 0.95rem; }
+  p{
+    color: rgba(22,33,62,0.75);
+    margin-top: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
   a{
     display: inline-block;
-    margin-top: 28px;
-    padding: 12px 28px;
+    margin-top: 26px;
+    padding: 13px 30px;
     border-radius: 999px;
-    background: #a855f7;
-    color: #ffffff;
+    background: #e7bd8c;
+    color: #16213e;
     text-decoration: none;
     font-weight: 700;
+    font-size: 0.9rem;
   }
 </style>
 </head>
 <body>
   <div class="contenedor">
     <img class="ilustracion" src="https://static.wixstatic.com/media/c0c363_a3c6fb4550ba475398bbc6e7127b21d9~mv2.jpg" alt="">
-    <div class="numero">404</div>
-    <h1>Este enlace no está en su bio.</h1>
+    <h1>¡Ups! Este link en bio se hizo invisible</h1>
     <p>Puede que el cliente cambió de nombre, borró el link, o esta URL nunca existió — como esa promesa de "empiezo el lunes".</p>
-    <a href="https://ayudaenlacompu.wixsite.com/my-site-28">Ir al inicio</a>
+    <a href="https://ayudaenlacompu.wixsite.com/my-site-28">Volver al inicio</a>
   </div>
 </body>
 </html>
