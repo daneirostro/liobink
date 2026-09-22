@@ -20,167 +20,827 @@
     --acento: #1a56ac;
     --borde-tarjeta: #a9c8ea;
   }
-  *{ box-sizing: border-box; margin:0; padding:0; }
-  html, body{ font-family: 'Helvetica Neue', Arial, sans-serif; color: #111; background: #ffffff; }
-  .contenedor{ max-width: 1000px; margin: 0 auto; padding: 0 24px; }
 
-  section{ padding: 60px 0; }
-  section:first-of-type + section{ padding-top: 20px; }
-  .fila{ display: flex; align-items: center; gap: 48px; flex-wrap: wrap; }
-  .fila.invertida{ flex-direction: row-reverse; }
-  .col{ flex: 1; min-width: 280px; }
-  .col img{ width: 100%; border-radius: 12px; display: block; }
-
-  h1{ font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 48px; }
-  h2{ font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 800; margin-bottom: 16px; }
-  p{ color: var(--texto-cuerpo); font-size: 1rem; line-height: 1.6; margin-top: 16px; }
-
-  .hero{ text-align: center; padding-top: 60px; padding-bottom: 20px; }
-  .hero p{ max-width: 560px; margin-left: auto; margin-right: auto; }
-  .boton-shop{
-    display: inline-block; margin-top: 32px; padding: 14px 36px;
-    background: var(--acento); color: #fff; text-decoration: none;
-    font-weight: 700; border-radius: 6px;
+  *{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
   }
+
+  html, body{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color:#111;
+    background:#ffffff;
+  }
+
+  .contenedor{
+    max-width:1000px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  section{
+    padding:60px 0;
+  }
+
+  section:first-of-type + section{
+    padding-top:20px;
+  }
+
+  .fila{
+    display:flex;
+    align-items:center;
+    gap:48px;
+    flex-wrap:wrap;
+  }
+
+  .fila.invertida{
+    flex-direction:row-reverse;
+  }
+
+  .col{
+    flex:1;
+    min-width:280px;
+  }
+
+  .col img{
+    width:100%;
+    border-radius:12px;
+    display:block;
+  }
+
+  h1{
+    font-size:clamp(2rem, 5vw, 3rem);
+    font-weight:800;
+    line-height:1.15;
+    margin-bottom:48px;
+  }
+
+  h2{
+    font-size:clamp(1.4rem, 3vw, 1.8rem);
+    font-weight:800;
+    margin-bottom:16px;
+  }
+
+  p{
+    color:var(--texto-cuerpo);
+    font-size:1rem;
+    line-height:1.6;
+    margin-top:16px;
+  }
+
+  /* HERO */
+
+  .hero{
+    text-align:center;
+    padding-top:60px;
+    padding-bottom:20px;
+  }
+
+  .hero p{
+    max-width:560px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .boton-shop{
+    display:inline-block;
+    margin-top:32px;
+    padding:14px 36px;
+    background:var(--acento);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    border-radius:6px;
+  }
+
+  /* CONTACTO */
 
   .contacto-card{
-    background: #f4efe8; border-radius: 12px; padding: 60px 20px;
-    display: flex; flex-direction: column; align-items: center; gap: 16px;
+    background:#f4efe8;
+    border-radius:12px;
+    padding:60px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
   }
+
   .boton-contacto-demo{
-    background: #16213e; color: #fff; padding: 14px 40px;
-    border-radius: 999px; font-weight: 600; text-decoration: none;
+    background:#16213e;
+    color:#fff;
+    padding:14px 40px;
+    border-radius:999px;
+    font-weight:600;
+    text-decoration:none;
   }
 
-  h3.elige-version{ text-align: center; font-size: 1.3rem; margin: 40px 0; }
+  /* PROPUESTA DE VALOR */
 
-  .precios{ display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
+  .propuesta{
+    padding:75px 0;
+    text-align:center;
+    background:#f7f9fc;
+  }
+
+  .propuesta h2{
+    font-size:clamp(1.7rem, 4vw, 2.4rem);
+    line-height:1.2;
+    margin-bottom:20px;
+    color:#16213e;
+  }
+
+  .propuesta .subtexto{
+    max-width:650px;
+    margin:0 auto 40px;
+    font-size:1.1rem;
+  }
+
+  .beneficios{
+    max-width:700px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:16px;
+    text-align:left;
+  }
+
+  .beneficios div{
+    background:#fff;
+    padding:18px 20px;
+    border-radius:10px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+  }
+
+  .beneficios strong{
+    color:#1a56ac;
+    font-size:1.2rem;
+  }
+
+  /* PRECIOS */
+
+  .precios-section{
+    padding:75px 0;
+  }
+
+  .titulo-precios{
+    text-align:center;
+    margin-bottom:12px;
+  }
+
+  .intro-precios{
+    max-width:650px;
+    margin:0 auto 45px;
+    text-align:center;
+  }
+
+  .precios{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+    align-items:stretch;
+  }
+
   .tarjeta-precio{
-    flex: 1; min-width: 280px; max-width: 420px;
-    border: 1px solid var(--borde-tarjeta); border-radius: 12px;
-    padding: 32px 28px; text-align: center;
-  }
-  .tarjeta-precio h4{ font-size: 1.15rem; font-weight: 700; margin-bottom: 20px; }
-  .tarjeta-precio ul{ list-style: none; text-align: left; margin-bottom: 20px; }
-  .tarjeta-precio li{ color: var(--texto-cuerpo); font-size: 0.95rem; margin-bottom: 14px; line-height: 1.5; }
-  .tarjeta-precio .nota{ font-size: 0.78rem; color: #555; margin-top: -8px; margin-bottom: 20px; display: block; }
-  .tarjeta-precio .pago-unico{ font-weight: 700; margin-bottom: 16px; }
-  .boton-conseguir{
-    display: inline-block; background: var(--acento); color: #fff;
-    padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 700;
+    position:relative;
+    border:1px solid var(--borde-tarjeta);
+    border-radius:14px;
+    padding:34px 28px;
+    text-align:center;
+    background:#fff;
+    display:flex;
+    flex-direction:column;
   }
 
-  @media (max-width: 700px){
-    .fila, .fila.invertida{ flex-direction: column; }
+  .tarjeta-precio.destacada{
+    border:2px solid #1a56ac;
+    box-shadow:0 8px 28px rgba(26,86,172,.12);
+  }
+
+  .etiqueta{
+    position:absolute;
+    top:-13px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#1a56ac;
+    color:#fff;
+    padding:5px 16px;
+    border-radius:20px;
+    font-size:.72rem;
+    font-weight:700;
+    white-space:nowrap;
+  }
+
+  .nombre-plan{
+    font-size:1.05rem;
+    font-weight:800;
+    color:#16213e;
+    margin-bottom:12px;
+  }
+
+  .precio{
+    font-size:2.6rem;
+    line-height:1;
+    font-weight:800;
+    color:#1a56ac;
+  }
+
+  .pago{
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    margin-top:7px;
+    color:#555;
+  }
+
+  .descripcion-plan{
+    font-size:.9rem;
+    line-height:1.5;
+    margin:24px 0;
+  }
+
+  .tarjeta-precio ul{
+    list-style:none;
+    text-align:left;
+    margin:0 0 25px;
+  }
+
+  .tarjeta-precio li{
+    color:#1a3a6e;
+    font-size:.9rem;
+    line-height:1.45;
+    margin-bottom:12px;
+  }
+
+  .pago-destacado{
+    margin-top:auto;
+    margin-bottom:24px;
+    padding:15px;
+    background:#f4f7fb;
+    border-radius:8px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+
+  .pago-destacado strong{
+    color:#16213e;
+  }
+
+  .pago-destacado span{
+    font-size:.82rem;
+    color:#555;
+  }
+
+  .boton-conseguir{
+    display:block;
+    background:#1a56ac;
+    color:#fff;
+    padding:14px 20px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:700;
+  }
+
+  .garantia-pago{
+    max-width:650px;
+    margin:45px auto 0;
+    text-align:center;
+  }
+
+  .garantia-pago strong{
+    color:#16213e;
+    font-size:.9rem;
+  }
+
+  .garantia-pago p{
+    font-size:.85rem;
+    margin-top:8px;
+  }
+
+  /* RESPONSIVE */
+
+  @media (max-width:850px){
+
+    .precios{
+      grid-template-columns:1fr;
+      max-width:480px;
+      margin:0 auto;
+    }
+
+    .beneficios{
+      grid-template-columns:1fr;
+    }
+  }
+
+  @media (max-width:700px){
+
+    .fila,
+    .fila.invertida{
+      flex-direction:column;
+    }
   }
 </style>
 </head>
+
 <body>
+
+<!-- HERO -->
 
 <section class="hero">
   <div class="contenedor">
-    <h1>TODO LO TUYO QUE QUIERES MOSTRAR EN UN SOLO LUGAR.</h1>
-    <p>Que te descubran, sepan quién eres, qué haces y cómo contactarte. Consíguelo en un espacio personal con todo lo que quieras compartir creado especialmente para ti.</p>
+
+    <h1>
+      TODO LO TUYO QUE QUIERES MOSTRAR EN UN SOLO LUGAR.
+    </h1>
+
+    <p>
+      Que te descubran, sepan quién eres, qué haces y cómo contactarte.
+      Consíguelo en un espacio personal con todo lo que quieras compartir
+      creado especialmente para ti.
+    </p>
+
   </div>
 </section>
 
+
+<!-- REDES -->
+
 <section>
   <div class="contenedor fila">
+
     <div class="col">
+
       <h2>TUS REDES Y SITIOS</h2>
-      <p>Elige entre veinte enlaces prediseñados para compartir dónde estás con una botonera que es como tu agencia de viajes contigo como único pasajero.</p>
+
+      <p>
+        Elige entre veinte enlaces prediseñados para compartir dónde estás
+        con una botonera que es como tu agencia de viajes contigo como
+        único pasajero.
+      </p>
+
     </div>
+
     <div class="col">
-      <img src="https://static.wixstatic.com/media/c0c363_6600a0ad93514044be42a7788aaf9c7e~mv2.jpg" alt="Redes sociales">
+
+      <img
+        src="https://static.wixstatic.com/media/c0c363_6600a0ad93514044be42a7788aaf9c7e~mv2.jpg"
+        alt="Redes sociales"
+      >
+
     </div>
+
   </div>
 </section>
 
+
+<!-- TARJETAS -->
+
 <section>
   <div class="contenedor fila">
+
     <div class="col">
-      <img src="https://static.wixstatic.com/media/c0c363_0a3083b34f9b4def8753cf9051f9ccdd~mv2.jpg" alt="Tarjetas destacadas">
+
+      <img
+        src="https://static.wixstatic.com/media/c0c363_0a3083b34f9b4def8753cf9051f9ccdd~mv2.jpg"
+        alt="Tarjetas destacadas"
+      >
+
     </div>
+
     <div class="col">
+
       <h2>DESTACA LO QUE QUIERAS</h2>
-      <p>Tu contenido destacado en cuatro elegantes tarjetas. El enlace a tu catálogo, un evento próximo, tu producto o servicio estrella, todos con un fondo que no necesitas personalizar pues nuestro sistema lo hace por ti.</p>
+
+      <p>
+        Tu contenido destacado en cuatro elegantes tarjetas. El enlace a
+        tu catálogo, un evento próximo, tu producto o servicio estrella,
+        todos con un fondo que no necesitas personalizar pues nuestro
+        sistema lo hace por ti.
+      </p>
+
     </div>
+
   </div>
 </section>
 
+
+<!-- POSTS -->
+
 <section>
   <div class="contenedor fila">
+
     <div class="col">
+
       <h2>INSERTA TUS POST</h2>
 
-      <p>¿Tienes alguna publicación en tus redes que quieras que se vea en tu página como si estuviera en esa misma red? ¡Pan comido!</p>
+      <p>
+        ¿Tienes alguna publicación en tus redes que quieras que se vea
+        en tu página como si estuviera en esa misma red? ¡Pan comido!
+      </p>
+
     </div>
+
     <div class="col">
-      <img src="https://static.wixstatic.com/media/c0c363_9cfe257479d74dcb9fff7e83f66c5667~mv2.jpg" alt="Insertar publicaciones">
+
+      <img
+        src="https://static.wixstatic.com/media/c0c363_9cfe257479d74dcb9fff7e83f66c5667~mv2.jpg"
+        alt="Insertar publicaciones"
+      >
+
     </div>
+
   </div>
 </section>
 
+
+<!-- DISEÑOS -->
+
 <section>
   <div class="contenedor fila">
+
     <div class="col">
-      <img src="https://static.wixstatic.com/media/c0c363_480e636808cd4b388b7b8020b5cd4e8e~mv2.png" alt="Diseños a escoger">
+
+      <img
+        src="https://static.wixstatic.com/media/c0c363_480e636808cd4b388b7b8020b5cd4e8e~mv2.png"
+        alt="Diseños a escoger"
+      >
+
     </div>
+
     <div class="col">
+
       <h2>DISEÑOS A ESCOGER</h2>
-      <p>Nuestro sistema genera al instante muchos diseños con tus mismos datos para que escojas el que más se ajusta a tu estilo. Es como ir a la peluquería y tener varios peinados en una sola cabeza. :)</p>
+
+      <p>
+        Nuestro sistema genera al instante muchos diseños con tus mismos
+        datos para que escojas el que más se ajusta a tu estilo. Es como
+        ir a la peluquería y tener varios peinados en una sola cabeza. :)
+      </p>
+
     </div>
+
   </div>
 </section>
+
+
+<!-- CONTACTO -->
 
 <section>
   <div class="contenedor fila">
+
     <div class="col">
+
       <h2>CONTACTO CON UN CLIC</h2>
-      <p>Que te contacten puede ser la diferencia entre tener una oportunidad y perderla. Con el botón dedicado que te ofrecemos esto es posible con un clic. Ni con un telescopio te encontrarían mejor.</p>
+
+      <p>
+        Que te contacten puede ser la diferencia entre tener una
+        oportunidad y perderla. Con el botón dedicado que te ofrecemos
+        esto es posible con un clic. Ni con un telescopio te encontrarían
+        mejor.
+      </p>
+
     </div>
+
     <div class="col contacto-card">
-      <a href="#" class="boton-contacto-demo" onclick="return false;">Contáctame</a>
+
+      <a
+        href="#"
+        class="boton-contacto-demo"
+        onclick="return false;"
+      >
+        Contáctame
+      </a>
+
     </div>
+
   </div>
 </section>
 
-<section id="elige-tu-version">
+
+<!-- PROPUESTA DE VALOR -->
+
+<section class="propuesta">
+
   <div class="contenedor">
-    <h3 class="elige-version">ELIGE TU VERSIÓN</h3>
+
+    <h2>
+      NO COMPRAS UNA HERRAMIENTA.<br>
+      COMPRAS UNA PÁGINA HECHA PARA TI.
+    </h2>
+
+    <p class="subtexto">
+      Tú nos das tus datos y nosotros hacemos tu página.
+      No tienes que aprender a diseñarla, configurarla ni construirla.
+    </p>
+
+    <div class="beneficios">
+
+      <div>
+        <strong>✓</strong>
+        <span>
+          Nosotros la hacemos por ti.
+        </span>
+      </div>
+
+      <div>
+        <strong>✓</strong>
+        <span>
+          La adaptamos a tu información y contenido.
+        </span>
+      </div>
+
+      <div>
+        <strong>✓</strong>
+        <span>
+          Puedes modificar tus datos cuando quieras.
+        </span>
+      </div>
+
+      <div>
+        <strong>✓</strong>
+        <span>
+          <b>Pago único.</b> Sin mensualidades.
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRECIOS -->
+
+<section id="precios" class="precios-section">
+
+  <div class="contenedor">
+
+    <h2 class="titulo-precios">
+      ELIGE TU VERSIÓN
+    </h2>
+
+    <p class="intro-precios">
+      Una página hecha para ti, con todo lo que necesitas para mostrar
+      quién eres, qué haces y cómo contactarte.
+    </p>
+
+
     <div class="precios">
 
-      <div class="tarjeta-precio">
-        <h4>Opción Básica</h4>
-        <ul>
-          <li>Tiene banner publicitario y marca de autoría.</li>
-          <li>Solo puedes insertar una publicación<br>de YouTube.</li>
-          <li>Cambia tus datos en cualquier momento y las veces que quieras.</li>
-          <li>Rellena el formulario usando una sola casilla. La IA hace el resto.</li>
-          <li>¡OPORTUNIDAD! Pagas después de publicar y revisar tu página.*</li>
-        </ul>
-        <span class="nota">* Cuentas con 24 horas para revisar y empezar a compartir tu página. Después de ese plazo, realiza el pago para que nuestro sistema no lo deshabilite automáticamente.</span>
-        <div class="pago-unico">Pago Único</div>
-        <a href="https://ayudaenlacompu.wixsite.com/my-site-28/formulario?plan=wix" class="boton-conseguir">Consíguela aquí</a>
-      </div>
+
+      <!-- BÁSICA -->
 
       <div class="tarjeta-precio">
-        <h4>Opción Profesional</h4>
+
+        <div class="nombre-plan">
+          BÁSICA
+        </div>
+
+        <div class="precio">
+          S/ 49
+        </div>
+
+        <div class="pago">
+          PAGO ÚNICO
+        </div>
+
+        <p class="descripcion-plan">
+          Todo lo necesario para tener tu propia página de presentación.
+        </p>
+
         <ul>
-          <li>Libre de banner publicitario y marca de autoría.</li>
-          <li>Puedes elegir insertar una publicación de YouTube, Instagram o TikTok.</li>
-          <li>Cambia tus datos en cualquier momento y las veces que quieras.</li>
-          <li>Rellena el formulario usando una sola casilla. La IA hace el resto.</li>
-          <li>¡OPORTUNIDAD! Pagas después de publicar y revisar tu página.*</li>
+
+          <li>
+            ✓ Página creada especialmente para ti
+          </li>
+
+          <li>
+            ✓ Hasta 20 tipos de enlaces
+          </li>
+
+          <li>
+            ✓ 4 tarjetas destacadas
+          </li>
+
+          <li>
+            ✓ 1 publicación de YouTube
+          </li>
+
+          <li>
+            ✓ Varios diseños para escoger
+          </li>
+
+          <li>
+            ✓ Botón de contacto
+          </li>
+
+          <li>
+            ✓ Puedes modificar tus datos cuando quieras
+          </li>
+
+          <li>
+            ✓ Incluye banner publicitario y marca de autoría
+          </li>
+
         </ul>
-        <span class="nota">* Cuentas con 24 horas para revisar y empezar a compartir tu página. Después de ese plazo, realiza el pago para que nuestro sistema no lo deshabilite automáticamente.</span>
-        <div class="pago-unico">Pago Único</div>
-        <a href="https://ayudaenlacompu.wixsite.com/my-site-28/formulario?plan=github" class="boton-conseguir">Consíguela aquí</a>
+
+        <div class="pago-destacado">
+
+          <strong>
+            Pagas una sola vez.
+          </strong>
+
+          <span>
+            No hay mensualidades.
+          </span>
+
+        </div>
+
+        <a
+          href="https://ayudaenlacompu.wixsite.com/my-site-28/formulario?plan=wix"
+          class="boton-conseguir"
+        >
+          Consíguela aquí
+        </a>
+
+      </div>
+
+
+      <!-- PROFESIONAL -->
+
+      <div class="tarjeta-precio destacada">
+
+        <div class="etiqueta">
+          MÁS ELEGIDA
+        </div>
+
+        <div class="nombre-plan">
+          PROFESIONAL
+        </div>
+
+        <div class="precio">
+          S/ 79
+        </div>
+
+        <div class="pago">
+          PAGO ÚNICO
+        </div>
+
+        <p class="descripcion-plan">
+          Una presentación profesional sin publicidad ni marca de autoría.
+        </p>
+
+        <ul>
+
+          <li>
+            ✓ Todo lo incluido en Básica
+          </li>
+
+          <li>
+            ✓ Sin banner publicitario
+          </li>
+
+          <li>
+            ✓ Sin marca de autoría
+          </li>
+
+          <li>
+            ✓ Publicación de YouTube, Instagram o TikTok
+          </li>
+
+          <li>
+            ✓ Más opciones de presentación
+          </li>
+
+          <li>
+            ✓ Puedes modificar tus datos cuando quieras
+          </li>
+
+        </ul>
+
+        <div class="pago-destacado">
+
+          <strong>
+            Pagas una sola vez.
+          </strong>
+
+          <span>
+            No hay mensualidades.
+          </span>
+
+        </div>
+
+        <a
+          href="https://ayudaenlacompu.wixsite.com/my-site-28/formulario?plan=github"
+          class="boton-conseguir"
+        >
+          Consíguela aquí
+        </a>
+
+      </div>
+
+
+      <!-- PROFESIONAL + ANALYTICS -->
+
+      <div class="tarjeta-precio">
+
+        <div class="nombre-plan">
+          PROFESIONAL + ANALYTICS
+        </div>
+
+        <div class="precio">
+          S/ 99
+        </div>
+
+        <div class="pago">
+          PAGO ÚNICO
+        </div>
+
+        <p class="descripcion-plan">
+          Tu página profesional y las estadísticas para saber cómo está funcionando.
+        </p>
+
+        <ul>
+
+          <li>
+            ✓ Todo lo incluido en Profesional
+          </li>
+
+          <li>
+            ✓ Estadísticas de visitas
+          </li>
+
+          <li>
+            ✓ Usuarios y páginas vistas
+          </li>
+
+          <li>
+            ✓ Dispositivos utilizados
+          </li>
+
+          <li>
+            ✓ Procedencia de las visitas
+          </li>
+
+          <li>
+            ✓ Tiempo de interacción
+          </li>
+
+          <li>
+            ✓ Seguimiento de clics
+          </li>
+
+        </ul>
+
+        <div class="pago-destacado">
+
+          <strong>
+            Pagas una sola vez.
+          </strong>
+
+          <span>
+            No hay mensualidades.
+          </span>
+
+        </div>
+
+        <a
+          href="https://ayudaenlacompu.wixsite.com/my-site-28/formulario?plan=analytics"
+          class="boton-conseguir"
+        >
+          Consíguela aquí
+        </a>
+
       </div>
 
     </div>
+
+
+    <!-- REVISIÓN ANTES DEL PAGO -->
+
+    <div class="garantia-pago">
+
+      <strong>
+        REVÍSALA ANTES DE PAGAR
+      </strong>
+
+      <p>
+        Publicamos tu página para que puedas revisarla y probarla.
+        Tienes 24 horas para comprobar que todo está como quieres.
+        Después de ese plazo, realiza el pago para mantenerla activa.
+      </p>
+
+    </div>
+
   </div>
+
 </section>
 
 </body>
 </html>
+
