@@ -3,66 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 — Este perfil se hizo invisible</title>
- <link rel="icon" href="logo2.ico" type="image/x-icon">
+<title>Tu página se está publicando...</title>
 <style>
-  *{ box-sizing: border-box; margin:0; padding:0; }
-  html, body{
-    min-height: 100%;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background: #ffffff;
-    color: #16213e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
-  }
-  .contenedor{ max-width: 520px; }
-  .ilustracion{
-    width: 440px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 12px;
-  }
-  h1{
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #16213e;
-  }
-  p{
-    color: rgba(22,33,62,0.75);
-    margin-top: 12px;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-  a{
-    display: inline-block;
-    margin-top: 26px;
-    padding: 13px 30px;
-    border-radius: 999px;
-    background: #16213e;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 12px rgba(22,33,62,0.20);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  a:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(22,33,62,0.28);
-  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { min-height: 100%; font-family: system-ui, sans-serif; background: #150a21; color: #f5f2ea; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; }
+  h1 { font-size: 1.3rem; margin-bottom: 8px; }
+  p { color: rgba(245,242,234,0.7); font-size: 0.95rem; }
+  .spinner { width: 28px; height: 28px; border: 3px solid rgba(245,242,234,0.3); border-top-color: #f5f2ea; border-radius: 50%; animation: girar 1s linear infinite; margin: 0 auto 16px; }
+  @keyframes girar { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body>
-  <div class="contenedor">
-    <img class="ilustracion" src="https://static.wixstatic.com/media/c0c363_2fbeddd69141445d9c553035e1f35d68~mv2.jpg" alt="">
-    <h1>Hombre invisible... ¿A la vista?</h1>
-    <p>¡Ups...! parece que alguien se esfumó del sitio porque tuvo un súbito pánico escénico... En lo que aparece prueba con crear tu propia página de presentación:</p>
-    <a href="https://ayudaenlacompu.wixsite.com/my-site-28">Crea tu página aquí</a>
+  <div>
+    <div class="spinner"></div>
+    <h1>Tu página se está publicando</h1>
+    <p>Esto puede tardar uno o dos minutos. Esta página se actualizará sola, no hace falta que hagas nada.</p>
   </div>
+  <script>
+    var intentos = 0;
+    var maxIntentos = 30; // 30 x 5s = 2.5 minutos
+
+    function intentarDeNuevo() {
+      intentos++;
+      if (intentos > maxIntentos) {
+        document.querySelector('p').textContent = 'Esto está tardando más de lo normal. Intenta recargar en unos minutos.';
+        document.querySelector('.spinner').style.display = 'none';
+        return;
+      }
+      fetch(window.location.href, { cache: 'no-store' })
+        .then(function (res) {
+          if (res.ok) {
+            window.location.reload();
+          } else {
+            setTimeout(intentarDeNuevo, 5000);
+          }
+        })
+        .catch(function () {
+          setTimeout(intentarDeNuevo, 5000);
+        });
+    }
+
+    setTimeout(intentarDeNuevo, 5000);
+  </script>
 </body>
 </html>
