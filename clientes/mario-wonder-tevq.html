@@ -14,13 +14,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mario Wonder</title>
-<meta name="build" content="1791644636342">
+<meta name="build" content="1791660206266">
 <style>
   :root{
-    --fondo: #150a21;
+    --fondo: #2a0f0f;
     --texto: #f5f2ea;
-    --texto-suave: rgba(245,242,234,0.72);
-    --acento: #a855f7;
+    --texto-suave: rgba(245,242,234,0.7);
+    --acento: #e05252;
     --acento-texto: #ffffff;
     --fuente-display: 'Fraunces', Georgia, serif;
     --font-body: 'Inter', system-ui, -apple-system, sans-serif;
@@ -40,6 +40,10 @@
   .recorte-circulo{ position: absolute; inset: 0; border-radius: 50%; background: #fff; box-shadow: 0 8px 30px rgba(0,0,0,0.45); }
   .recorte-img{ position: absolute; left: 0; bottom: 0; width: 220px; height: auto; clip-path: inset(-200px 0 0 0 round 0 0 110px 110px); }
   .recorte-wrap + .page .display-name{ margin-top: 18px; }
+  .page.page--dialogo{ padding-top: 56px; }
+  .dialogo-card{ display: flow-root; width: 100%; max-width: 480px; margin-top: 28px; padding: 20px; border-radius: 22px; background: var(--glass); border: 1px solid var(--glass-border); }
+  .dialogo-foto{ float: left; width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.85); shape-outside: circle(); shape-margin: 14px; }
+  .dialogo-texto{ font-size: 0.98rem; line-height: 1.55; white-space: pre-line; overflow-wrap: anywhere; }
   .hero-photo--enmarcada{ width: calc(100% - 40px); max-width: 480px; height: 220px; object-fit: cover; border-radius: 20px; margin: 24px auto 0; display: block; }
 
   @media (min-width: 720px){ .hero-photo--enmarcada{ height: 280px; } }
@@ -81,9 +85,10 @@
 <div class="share-toast" id="share-toast"></div>
 <div class="hero-fondo" style="background-image:url('https://static.wixstatic.com/media/6f6b2a_4bde40939bc44123a8ab2410068f48a6~mv2.jpg')"></div><img class="hero-photo hero-photo--completa" src="https://static.wixstatic.com/media/6f6b2a_4bde40939bc44123a8ab2410068f48a6~mv2.jpg" alt="">
 <main class="page">
-    
+      
   <div class="title-row"><h1 class="display-name">Mario Wonder</h1><button class="share-btn" id="share-btn" type="button" aria-label="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg></button></div>
   <p class="tagline"></p>
+    
   <nav class="social-row" aria-label="Redes sociales">
 
   </nav>
