@@ -14,8 +14,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dora Cisneros</title>
-<meta name="build" content="1791660086685">
+<meta name="build" content="1792019096906">
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap');
   :root{
     --fondo: #2a0f0f;
     --texto: #f5f2ea;
@@ -27,7 +28,6 @@
     --glass: rgba(255,255,255,0.08);
     --glass-border: rgba(255,255,255,0.14);
   }
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap');
   *{ box-sizing: border-box; margin:0; padding:0; }
   html, body{ min-height: 100%; font-family: var(--font-body); color: var(--texto); background: var(--fondo); }
 
@@ -46,7 +46,7 @@
   .dialogo-texto{ font-size: 0.98rem; line-height: 1.55; white-space: pre-line; overflow-wrap: anywhere; }
   .hero-photo--enmarcada{ width: calc(100% - 40px); max-width: 480px; height: 220px; object-fit: cover; border-radius: 20px; margin: 24px auto 0; display: block; }
 
-  @media (min-width: 720px){ .hero-photo--enmarcada{ height: 280px; } }
+   @media (min-width: 720px){ .hero-photo--enmarcada{ width: 100%; max-width: none; height: 60vh; border-radius: 0; margin: 0; } }
 
   .page{ min-height: 60vh; width: 100%; display: flex; flex-direction: column; align-items: center; padding: 0 20px 48px; }
   .profile-pic{ width: 108px; height: 108px; margin-top: -54px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.85); box-shadow: 0 8px 30px rgba(0,0,0,0.45); }
