@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 — Este perfil se hizo invisible</title>
- <link rel="icon" href="logo2.ico" type="image/x-icon">
+ <link rel="icon" href="/liobink/logo2.ico" type="image/x-icon">
 <style>
   *{ box-sizing: border-box; margin:0; padding:0; }
   html, body{
@@ -105,7 +105,7 @@
         });
     }
 
-    function iniciarReintento() {
+      function iniciarReintento() {
       let intentos = 0;
       const maxIntentos = 30; // 30 x 5s = 2.5 minutos
 
@@ -116,10 +116,11 @@
           document.querySelector('#contenedorEspera .spinner').style.display = 'none';
           return;
         }
-        fetch(window.location.href, { cache: 'no-store' })
+        // El parámetro t evita que una respuesta 404 guardada en caché se confunda con la página real
+        fetch(window.location.pathname + '?t=' + Date.now(), { cache: 'no-store' })
           .then(res => {
             if (res.ok) {
-              window.location.reload();
+              window.location.replace(window.location.pathname + '?t=' + Date.now());
             } else {
               setTimeout(intentarDeNuevo, 5000);
             }
