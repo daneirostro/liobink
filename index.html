@@ -38,6 +38,7 @@
   .col img{ width:100%; border-radius:12px; display:block; }
   h1{ font-size:clamp(2rem, 5vw, 3rem); font-weight:800; line-height:1.15; margin-bottom:24px; }
   h2{ font-size:clamp(1.4rem, 3vw, 1.8rem); font-weight:800; margin-bottom:16px; color:var(--oscuro); }
+  .centrado{ text-align:center; }
   p{ color:var(--texto-cuerpo); font-size:1rem; line-height:1.6; margin-top:16px; }
 
   /* HERO */
@@ -109,7 +110,7 @@
     .beneficios{ grid-template-columns:1fr; }
     .pasos{ grid-template-columns:1fr 1fr; }
   }
-  @media (max-width:700px){ .fila{ flex-direction:column; } .pasos{ grid-template-columns:1fr; } }
+    @media (max-width:700px){ .fila{ flex-direction:column; } .fila.imagen-primero{ flex-direction:column-reverse; } .fila h2{ text-align:center; } .pasos{ grid-template-columns:1fr; } }
 </style>
 </head>
 
@@ -145,7 +146,7 @@
 
 <!-- TARJETAS -->
 <section>
-  <div class="contenedor fila">
+    <div class="contenedor fila imagen-primero">
     <div class="col">
       <img loading="lazy" src="https://static.wixstatic.com/media/c0c363_0a3083b34f9b4def8753cf9051f9ccdd~mv2.jpg" alt="Tarjetas destacadas">
     </div>
@@ -171,7 +172,7 @@
 
 <!-- DISEÑOS -->
 <section>
-  <div class="contenedor fila">
+    <div class="contenedor fila imagen-primero">
     <div class="col">
       <img loading="lazy" src="https://static.wixstatic.com/media/c0c363_480e636808cd4b388b7b8020b5cd4e8e~mv2.png" alt="Diseños a escoger">
     </div>
@@ -212,7 +213,7 @@
 <!-- CÓMO FUNCIONA -->
 <section>
   <div class="contenedor">
-    <h2>CÓMO FUNCIONA</h2>
+    <h2 class="centrado">CÓMO FUNCIONA</h2>
     <ol class="pasos">
       <li><strong>Elige tu versión</strong>Compara las opciones de abajo y toca "Consíguela aquí".</li>
       <li><strong>Llena el formulario</strong>Tu nombre, tu descripción, tus redes y tus tarjetas.</li>
@@ -300,7 +301,7 @@
 <section>
   <div class="contenedor">
     <div class="preguntas-caja">
-      <h2>PREGUNTAS FRECUENTES</h2>
+      <h2 class="centrado">PREGUNTAS FRECUENTES</h2>
       <details>
         <summary>¿Qué necesito para empezar?</summary>
         <p>Tu nombre, una descripción corta, tus enlaces y las fotos que pida el diseño que elijas. Desde tu celular es suficiente.</p>
