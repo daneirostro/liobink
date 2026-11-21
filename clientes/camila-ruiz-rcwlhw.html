@@ -15,7 +15,7 @@
 <meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Camila Ruiz</title>
-<meta name="build" content="1795228158279">
+<meta name="build" content="1795301155362">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap');
   :root{
@@ -56,8 +56,9 @@
   }
   .page--tipografico::before{ content: ""; position: fixed; top: -20vh; left: 50%; width: 120vw; height: 70vh; transform: translateX(-50%); background: radial-gradient(closest-side, var(--acento), transparent); opacity: 0.35; z-index: -1; pointer-events: none; }
   .monograma{ display: block; width: 112px; height: 112px; margin-top: 56px; border-radius: 50%; object-fit: cover; border: 3px solid var(--acento); box-shadow: 0 8px 30px rgba(0,0,0,0.35); }
-  .page--tipografico .social-row{ position: relative; display: grid; grid-template-columns: 1fr 1fr; justify-items: center; gap: 12px 0; width: 200px; max-width: 100%; }
-  .page--tipografico .social-row::before{ content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; transform: translateX(-50%); background: var(--acento); opacity: 0.45; }
+  .page--tipografico .social-row{ flex-wrap: nowrap; align-items: stretch; gap: 0; max-width: 100%; }
+    .page--tipografico .social-col{ display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 12px; padding: 0 14px; min-width: 0; max-width: 232px; }
+  .page--tipografico .social-col + .social-col{ border-left: 1px solid color-mix(in srgb, var(--acento) 45%, transparent); }
   .page--tipografico .card-list{ display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .page--tipografico .link-card{ min-height: 120px; }
   .page--tipografico .link-card:last-child:nth-child(odd){ grid-column: 1 / -1; }
@@ -139,14 +140,7 @@
   .page--diagonal .card-list{ width: calc(100% - 16px); gap: 8px; }
   .page--diagonal .link-card{ transform: rotate(-3deg); }
   .page--diagonal .link-card:hover{ transform: rotate(-3deg) translateY(-4px); }
-    /* Diseño 10: dos columnas */
-  .hero-photo--columnas{ display: block; width: 100%; height: 36vh; max-height: 340px; object-fit: cover; object-position: center 30%; border-radius: 0 0 28px 28px; }
-  .page.page--columnas{ padding-top: 20px; }
-  .card-list--columnas{ display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 480px; }
-  .card-list--columnas .link-card{ min-height: 120px; cursor: pointer; font: inherit; }
-  .card-list--columnas .link-card--ancha{ grid-column: 1 / -1; min-height: 84px; }
-  .card-list--columnas .contact-btn--centro{ grid-column: 1 / -1; justify-self: center; margin-top: 0; }
-  
+    
   /* Diseño 11: Conversación */
   .page.page--conversacion{ padding-top: 28px; padding-bottom: 110px; align-items: stretch; max-width: 480px; margin: 0 auto; }
   .page--conversacion .perfil-card{ background: none; border: 0; padding: 0; align-items: flex-start; gap: 12px; max-width: none; }
@@ -281,7 +275,7 @@
   
     
   <nav class="social-row" aria-label="Redes sociales">
-
+<div class="social-col">
     <a href="https://www.instagram.com/juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="instagram"><img src="https://img.icons8.com/color/96/instagram-new.png" alt="instagram"></a>
     <a href="https://www.tiktok.com/@juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="tiktok"><img src="https://img.icons8.com/color/96/tiktok--v1.png" alt="tiktok"></a>
     <a href="https://www.youtube.com/@juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="youtube"><img src="https://img.icons8.com/color/96/youtube-play.png" alt="youtube"></a>
@@ -291,7 +285,7 @@
     <a href="https://juanperez.com/" class="social-link" target="_blank" rel="noopener noreferrer" title="web"><img src="https://img.icons8.com/color/96/domain.png" alt="web"></a>
     <a href="https://t.me/danieleliascisneros" class="social-link" target="_blank" rel="noopener noreferrer" title="telegram"><img src="https://img.icons8.com/color/96/telegram-app.png" alt="telegram"></a>
     <a href="https://www.linkedin.com/in/juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="linkedin"><img src="https://img.icons8.com/color/96/linkedin.png" alt="linkedin"></a>
-    <a href="https://x.com/juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="x"><img src="https://img.icons8.com/color/96/twitterx--v1.png" alt="x"></a>
+    <a href="https://x.com/juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="x"><img src="https://img.icons8.com/color/96/twitterx--v1.png" alt="x"></a></div><div class="social-col">
     <a href="https://www.pinterest.com/juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="pinterest"><img src="https://img.icons8.com/color/96/pinterest--v1.png" alt="pinterest"></a>
     <a href="https://www.snapchat.com/add/juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="snapchat"><img src="https://img.icons8.com/color/96/snapchat.png" alt="snapchat"></a>
     <a href="https://www.threads.com/@juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="threads"><img src="https://img.icons8.com/pulsar-color/96/threads.png" alt="threads"></a>
@@ -301,14 +295,14 @@
     <a href="https://www.patreon.com/juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="patreon"><img src="https://img.icons8.com/color/96/patreon.png" alt="patreon"></a>
     <a href="https://onlyfans.com/juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="onlyfans"><img src="https://img.icons8.com/color/96/onlyfans.png" alt="onlyfans"></a>
     <a href="https://github.com/juanperez/" class="social-link" target="_blank" rel="noopener noreferrer" title="github"><img src="https://img.icons8.com/color/96/github.png" alt="github"></a>
-    <a href="https://start.me/p/VbARp8/mi-pagina-de-inicio/" class="social-link" target="_blank" rel="noopener noreferrer" title="tienda"><img src="https://img.icons8.com/?size=100&amp;id=102562&amp;format=png&amp;color=000000" alt="tienda"></a>
+    <a href="https://start.me/p/VbARp8/mi-pagina-de-inicio/" class="social-link" target="_blank" rel="noopener noreferrer" title="tienda"><img src="https://img.icons8.com/?size=100&amp;id=102562&amp;format=png&amp;color=000000" alt="tienda"></a></div>
   </nav>
   <section class="embeds-section"><iframe width="560" height="315" src="https://www.youtube.com/embed/wxGtdGBQJsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
-  <section class="card-list" aria-label="Enlaces">
+    <section class="card-list" aria-label="Enlaces">
 <a href="https://start.me/p/VbARp8/mi-pagina-de-inicio" class="link-card" target="_blank" rel="noopener noreferrer"><img class="link-thumb" src="https://static.wixstatic.com/media/c0c363_86300ecbfe714e858fe863590b32ea93~mv2.webp" alt=""><span class="link-title">Video</span></a><a href="https://start.me/p/VbARp8/mi-pagina-de-inicio" class="link-card" target="_blank" rel="noopener noreferrer"><img class="link-thumb" src="https://static.wixstatic.com/media/c0c363_934128c68b1948e3a75b9d1d91f10a4d~mv2.webp" alt=""><span class="link-title">Reserva</span></a><a href="https://start.me/p/VbARp8/mi-pagina-de-inicio" class="link-card" target="_blank" rel="noopener noreferrer"><img class="link-thumb" src="https://static.wixstatic.com/media/c0c363_b6617195a0354149a0cf856ab24f0218~mv2.webp" alt=""><span class="link-title">Tienda</span></a><a href="https://start.me/p/VbARp8/mi-pagina-de-inicio" class="link-card" target="_blank" rel="noopener noreferrer"><img class="link-thumb" src="https://static.wixstatic.com/media/c0c363_7c3bc2ca14b6476c9af890c777e3c57e~mv2.webp" alt=""><span class="link-title">Catálogo</span></a>
   </section>
     
-    <a href="https://wa.me/51906088232" class="contact-btn" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/color/96/whatsapp--v1.png" alt="">Contáctame</a>
+        <a href="https://wa.me/51906088232" class="contact-btn" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/color/96/whatsapp--v1.png" alt="">Contáctame</a>
 </main>
 
 <script>
