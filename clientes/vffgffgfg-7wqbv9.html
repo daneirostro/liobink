@@ -15,7 +15,7 @@
 <meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>vffgffgfg</title>
-<meta name="build" content="1795057108750">
+<meta name="build" content="1795301155416">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap');
   :root{
@@ -55,7 +55,10 @@
     .page.page--derecha{ margin-left: auto; }
   }
   .page--tipografico::before{ content: ""; position: fixed; top: -20vh; left: 50%; width: 120vw; height: 70vh; transform: translateX(-50%); background: radial-gradient(closest-side, var(--acento), transparent); opacity: 0.35; z-index: -1; pointer-events: none; }
-  .monograma{ width: 112px; height: 112px; margin-top: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--acento); color: var(--acento-texto); font-family: var(--fuente-display); font-weight: 700; font-size: 2.6rem; letter-spacing: 0.02em; box-shadow: 0 8px 30px rgba(0,0,0,0.35); }
+  .monograma{ display: block; width: 112px; height: 112px; margin-top: 56px; border-radius: 50%; object-fit: cover; border: 3px solid var(--acento); box-shadow: 0 8px 30px rgba(0,0,0,0.35); }
+  .page--tipografico .social-row{ flex-wrap: nowrap; align-items: stretch; gap: 0; max-width: 100%; }
+    .page--tipografico .social-col{ display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 12px; padding: 0 14px; min-width: 0; max-width: 232px; }
+  .page--tipografico .social-col + .social-col{ border-left: 1px solid color-mix(in srgb, var(--acento) 45%, transparent); }
   .page--tipografico .card-list{ display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .page--tipografico .link-card{ min-height: 120px; }
   .page--tipografico .link-card:last-child:nth-child(odd){ grid-column: 1 / -1; }
@@ -137,14 +140,7 @@
   .page--diagonal .card-list{ width: calc(100% - 16px); gap: 8px; }
   .page--diagonal .link-card{ transform: rotate(-3deg); }
   .page--diagonal .link-card:hover{ transform: rotate(-3deg) translateY(-4px); }
-    /* Diseño 10: dos columnas */
-  .hero-photo--columnas{ display: block; width: 100%; height: 36vh; max-height: 340px; object-fit: cover; object-position: center 30%; border-radius: 0 0 28px 28px; }
-  .page.page--columnas{ padding-top: 20px; }
-  .card-list--columnas{ display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 480px; }
-  .card-list--columnas .link-card{ min-height: 120px; cursor: pointer; font: inherit; }
-  .card-list--columnas .link-card--ancha{ grid-column: 1 / -1; min-height: 84px; }
-  .card-list--columnas .contact-btn--centro{ grid-column: 1 / -1; justify-self: center; margin-top: 0; }
-  
+    
   /* Diseño 11: Conversación */
   .page.page--conversacion{ padding-top: 28px; padding-bottom: 110px; align-items: stretch; max-width: 480px; margin: 0 auto; }
   .page--conversacion .perfil-card{ background: none; border: 0; padding: 0; align-items: flex-start; gap: 12px; max-width: none; }
@@ -271,7 +267,7 @@
 <main class="page page--dialogo">
       
             
-      
+            
   
   <div class="title-row"><h1 class="display-name">vffgffgfg</h1><button class="share-btn" id="share-btn" type="button" aria-label="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg></button></div>
   <p class="tagline"></p>
@@ -282,11 +278,11 @@
 
   </nav>
   
-  <section class="card-list" aria-label="Enlaces">
+    <section class="card-list" aria-label="Enlaces">
 
   </section>
     
-    <footer>hecho con 🤎</footer>
+        <footer>hecho con 🤎</footer>
 </main>
 
 <script>
